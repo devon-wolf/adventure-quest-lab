@@ -1,0 +1,24 @@
+form {
+	padding: 1rem;
+	background-color: mistyrose;
+	display: flex;
+	align-items: center;
+}
+
+label {
+	display: flex;
+	align-items: center;
+	padding: .5rem;
+	margin: 1rem;
+	background-color: rgb(115, 180, 177);
+}
+
+input {
+	display: block;
+	margin: .5rem;
+}
+
+button {
+	margin: 1rem;
+	height: fit-content;
+}
