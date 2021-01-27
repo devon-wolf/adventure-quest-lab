@@ -1,5 +1,22 @@
-// import functions and grab DOM elements
+import {
+    setUser
+} from './utils/data-utils.js';
 
-// initialize state
+const userDataForm = document.querySelector('form');
 
-// set event listeners to update state and DOM
+userDataForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(userDataForm);
+
+    const user = {
+        name: formData.get('name'),
+        charClass: formData.get('char-class'),
+        hp: 100,
+        gold: 0,
+        completed: {}
+    };
+
+    setUser(user);
+    window.location = './map';
+});
