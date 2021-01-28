@@ -27,7 +27,12 @@ export function renderMapEntry() {
 	
         a.textContent = quest.title;
         a.href = `../quest/?id=${quest.id}`;
-        if (user.completed[quest.id]) a.style.textDecoration = 'line-through';
+        if (user.completed[quest.id]) {
+            a.style.textDecoration = 'line-through';
+            a.style.color = 'lightslategray';
+            a.style.cursor = 'inherit';
+            a.href = '#';
+        }
 	
         li.append(a);
         ul.append(li);
