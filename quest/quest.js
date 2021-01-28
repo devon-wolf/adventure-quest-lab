@@ -1,5 +1,5 @@
-import questData from '../data/data.js';
-import { findByID } from '../utils/data-utils.js';
+// import questData from '../data/data.js';
+// import { findByID } from '../utils/data-utils.js';
 import { renderQuest } from '../utils/quest-render-utils.js';
 
 try { 
@@ -7,7 +7,7 @@ try {
     const choiceForm = document.querySelector('form');
 
     choiceForm.addEventListener('submit', () => {
-    	// e.preventDefault();
+		// e.preventDefault();
     }); 
 }
 catch (error) {
