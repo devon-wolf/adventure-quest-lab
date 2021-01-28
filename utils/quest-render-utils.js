@@ -36,3 +36,14 @@ export function renderQuest() {
     button.textContent = '==>';
     choiceSelection.append(button);
 }
+
+export function selectChoice(form) {
+    const choiceData = new FormData(form);
+    return choiceData.get('choices');
+}
+
+export function renderChoiceOutcome(choice) {
+    const questChoices = questObject.choices;
+    const choiceObject = findByID(choice, questChoices);
+    console.log(choiceObject);
+}
