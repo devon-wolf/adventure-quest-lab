@@ -2,6 +2,7 @@ import {
     setUser,
     getUser,
     clearUser,
+    submitUserData,
 } from '../utils/data-utils.js';
 
 const test = QUnit.test;
@@ -49,4 +50,28 @@ test('It should clear the user data from local storage', (expect) => {
     const actual = localStorage.getItem(USER);
 
     expect.equal(actual, expected);
+});
+
+// test submitUserData
+test('It should use form data to set the user object in localStorage', (expect) => {
+	
+    const testForm = new FormData();
+    testForm.append('name', 'Testy');
+    testForm.append('char-class', 'thief');
+    testForm.append('hp', 100);
+    testForm.append('gold', 0);
+    testForm.append('completed', {});
+
+    submitUserData(testForm);
+
+    const actual = JSON.parse(localStorage.getItem(USER));
+    const expected = {
+        charClass: 'thief',
+        completed: {},
+        gold: 0,
+        hp: 100,
+        name: 'Testy'
+    };
+
+    expect.deepEqual(actual, expected);
 });

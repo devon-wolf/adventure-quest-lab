@@ -6,5 +6,7 @@ const userDataForm = document.querySelector('form');
 
 userDataForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    submitUserData(userDataForm);
+    const formData = new FormData(userDataForm);
+    submitUserData(formData);
+    window.location = './map';
 });

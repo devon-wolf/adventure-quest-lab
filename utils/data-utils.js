@@ -17,9 +17,7 @@ export function clearUser() {
     localStorage.setItem(USER, JSON.stringify(emptyUser));
 }
 
-export function submitUserData(form) {
-    const formData = new FormData(form);
-    
+export function submitUserData(formData) {
     const user = {
         name: formData.get('name'),
         charClass: formData.get('char-class'),
@@ -27,11 +25,8 @@ export function submitUserData(form) {
         gold: 0,
         completed: {}
     };
-    
     setUser(user);
-    window.location = './map';
 }
-
 
 // this function does not work and is also pretty redundant considering we can change object properties by assignment... holding onto it to experiment with later
 // export function updateUser(param, change) {
