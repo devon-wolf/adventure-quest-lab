@@ -1,20 +1,24 @@
 main {
 	display: grid;
-	grid-template-rows: min-content 2fr 1fr;
+	grid-template-rows: min-content 1fr 1fr;
 }
 
 h2 {
 	padding: 1rem;
 	background-color: lightseagreen;
 	text-align: center;
+	border-radius: 45px;
+	box-shadow: rgb(6, 36, 36) .3rem .3rem;
 }
 
 .description {
-	background-color: lawngreen;
+	background-color: rgb(201, 230, 173);
 	padding: 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 45px;
+	box-shadow: rgb(6, 36, 36) .3rem .3rem;
 }
 
 form {
@@ -23,6 +27,8 @@ form {
 	display: grid;
 	grid-template-rows: 1fr min-content;
 	grid-template-columns: 1fr 1fr 1fr;
+	border-radius: 45px;
+	box-shadow: rgb(6, 36, 36) .3rem .3rem;
 }
 
 label {
@@ -32,8 +38,9 @@ label {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: .5rem;
+	padding: 1rem;
 	margin: 1rem;
+	border-radius: 20px;
 }
 
 input {
@@ -46,4 +53,6 @@ form button {
 	width: fit-content;
 	;
 	margin: auto;
+	border: none;
+	border-radius: 20px;
 }

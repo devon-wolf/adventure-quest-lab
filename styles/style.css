@@ -12,12 +12,13 @@ body, html {
 body {
 	background-color: lightslategray;
 	display: grid;
-	grid-template-rows: min-content 1fr min-content;
+	grid-template-columns: min-content 1fr;
 	font-family: 'Playfair Display', serif;
 }
 
-main, header, footer {
+main, aside {
 	padding: 1rem;
+	height: auto;
 }
 
 main {
@@ -26,12 +27,11 @@ main {
 	align-items: center;
 }
 
-header {
-	background-color: mediumvioletred;
-}
-
-footer {
-	background-color: mediumorchid;
+aside {
+	background-color: rgb(107, 52, 134);
+	color: lightsteelblue;
+	text-shadow: rgb(6, 36, 36) 1px 1px;
+	box-shadow: rgb(6, 36, 36) .3rem .3rem;
 }
 
 button, input {
