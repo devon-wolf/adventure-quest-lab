@@ -33,5 +33,40 @@ const machine = {
     }]
 };
 
-const quests = [machine];
+const door = {
+    id: 'door',
+    title: 'A Glowing Door',
+    description: `
+	Something about a door. It's glowing, apparently.
+	`,
+    choices: [{
+        id: 'knock',
+        description: 'Knock politely',
+        result: `
+		No one answers, but you are terribly polite and wouldn't dream of entering uninvited. You continue to wait in the lab indefinitely, suffering 20 hp of malnutrition, dehydration, and boredom.
+		`,
+        hp: -20,
+        gold: 0
+    },
+    {
+        id: 'open',
+        description: 'Turn the knob and open the door',
+        result: `
+		DING DING DING TREASURE - 300 gold is yours, but something smells... weird. You lose 10 hp to mysterious forces.
+		`,
+        hp: -10,
+        gold: 300
+    },
+    {
+        id: 'kick',
+        description: 'Kick the thing down',
+        result: `
+		You would have been heir to a grand treasure, but the door you damaged was worth more than the room's abundant riches. After all the math is done, you lose 5 gold.
+		`,
+        hp: 0,
+        gold: -5
+    }]
+};
+
+const quests = [machine, door];
 export default quests;

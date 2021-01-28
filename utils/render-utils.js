@@ -1,9 +1,6 @@
 import questData from '../data/data.js';
 
-import {
-    findByID,
-    getUser
-} from '../utils/data-utils.js';
+import { findByID, getUser } from '../utils/data-utils.js';
 
 // map variables
 const ul = document.querySelector('ul');
