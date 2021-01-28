@@ -10,7 +10,7 @@ body, html {
 }
 
 body {
-	background-color: lightgray;
+	background-color: lightslategray;
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 	font-family: 'Playfair Display', serif;
@@ -21,7 +21,6 @@ main, header, footer {
 }
 
 main {
-	background-color: lightskyblue;
 	display: flex;
 	justify-content: center;
 	align-items: center;
