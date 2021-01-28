@@ -1,0 +1,32 @@
+main {
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+h3 {
+	padding: 1rem;
+	background-color: lightseagreen;
+	text-align: center;
+	border-radius: 45px;
+	box-shadow: rgb(6, 36, 36) .3rem .3rem;
+}
+
+.quest-summary {
+	background-color: rgb(201, 230, 173);
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 45px;
+	box-shadow: rgb(6, 36, 36) .3rem .3rem;
+}
+
+button {
+	margin: 1rem;
+	padding: .5rem;
+	height: fit-content;
+	grid-column: 1 / 4;
+	border: solid 1px lightsteelblue;
+	box-shadow:rgb(6, 36, 36) .3rem .3rem;
+	border-radius: 20px;
+}

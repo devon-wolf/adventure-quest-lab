@@ -5,7 +5,8 @@ export function renderQuestSummary() {
     const p = document.querySelector('p');
 
     const user = getUser();
+    const capitalClass = user.charClass.charAt(0).toUpperCase() + user.charClass.slice(1);
 
-    h2.textContent = `${user.name} the ${user.charClass}`;
+    h2.textContent = `${user.name} the ${capitalClass}`;
     p.textContent = `You end your adventures with ${user.gold} gold and ${user.hp} hp`;
 }

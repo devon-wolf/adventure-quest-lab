@@ -31,10 +31,6 @@ input {
 	margin: .5rem;
 }
 
-input[type="radio"]:checked {
-	transform: scale(1.5);
-}
-
 button {
 	margin: 1rem;
 	padding: .5rem;

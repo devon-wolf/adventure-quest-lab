@@ -53,6 +53,7 @@ button {
 	width: 3.5rem;
 	margin: auto;
 	border: none;
+	box-shadow:rgb(6, 36, 36) .3rem .3rem;
 }
 
 form button {

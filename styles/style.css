@@ -37,3 +37,7 @@ aside {
 button, input {
 	font-family: 'Playfair Display', serif;
 }
+
+input[type="radio"]:checked {
+	transform: scale(1.5);
+}
