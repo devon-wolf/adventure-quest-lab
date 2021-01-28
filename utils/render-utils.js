@@ -1,22 +1,56 @@
+import questData from '../data/data.js';
+
 import {
-    findByID
+    findByID,
+    getUser
 } from '../utils/data-utils.js';
 
-import {
-    h2,
-    p,
-    choiceSelection,
-    button
-} from '../quest/quest.js';
+// map variables
+const ul = document.querySelector('ul');
+const user = getUser();
 
-import questData from '../data/data.js';
+// map functions
+export function checkQuestStatus() {
+    let completedAllQuests = true;
+
+    for (let quest of questData) {
+        if (!user.completed[quest.id]) {
+            completedAllQuests = false;
+        }
+    }
+	
+    if (user.hp <= 0 || completedAllQuests) {
+        window.location = '../results';
+    }
+}
+
+export function renderMapEntry() {
+    for (let quest of questData) {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+	
+        a.textContent = quest.title;
+        a.href = `../quest/?id=${quest.id}`;
+        if (user.completed[quest.id]) a.style.textDecoration = 'line-through';
+	
+        li.append(a);
+        ul.append(li);
+    }
+}
+
+// quest variables
+const h2 = document.querySelector('h2');
+const p = document.querySelector('p');
+const choiceSelection = document.querySelector('form');
+const button = document.createElement('button');
 
 const params = new URLSearchParams(window.location.search);
 const questID = params.get('id');
-const quest = findByID(questID, questData);
+const questObject = findByID(questID, questData);
 
+// quest functions
 function renderQuestChoices() {
-    for (let choice of quest.choices) {
+    for (let choice of questObject.choices) {
         const label = document.createElement('label');
         const radioButton = document.createElement('input');
         const textSpan = document.createElement('span');
@@ -33,8 +67,8 @@ function renderQuestChoices() {
 }
 
 export function renderQuest() {
-    h2.textContent = quest.title;
-    p.textContent = quest.description;
+    h2.textContent = questObject.title;
+    p.textContent = questObject.description;
     renderQuestChoices();
     button.textContent = '==>';
     choiceSelection.append(button);
