@@ -46,9 +46,24 @@ export function selectChoice(form) {
 export function renderChoiceOutcome(choice) {
     const questChoices = questObject.choices;
     const choiceObject = findByID(choice, questChoices);
-    console.log(choiceObject);
 
     h2.textContent = choiceObject.description;
     p.textContent = choiceObject.result;
-    choiceSelection.textContent = '';
+    
+    continueToMap();
+}
+
+function continueToMap() {
+    choiceSelection.remove();
+    
+    const continueButton = document.createElement('button');
+    continueButton.textContent = '==>';
+
+    const main = document.querySelector('main');
+    main.append(continueButton);
+
+    continueButton.addEventListener('click', () => {
+        // update user stats either here or in renderChoiceOutcome
+        window.location = '../map/';
+    });
 }

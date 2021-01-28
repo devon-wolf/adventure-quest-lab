@@ -47,6 +47,14 @@ input {
 	display: block;
 }
 
+button {
+	border-radius: 20px;
+	height: 2rem;
+	width: 3.5rem;
+	margin: auto;
+	border: none;
+}
+
 form button {
 	grid-row: 2;
 	grid-column: 2;
