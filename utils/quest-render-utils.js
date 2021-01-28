@@ -1,5 +1,5 @@
 import questData from '../data/data.js';
-import { findByID } from '../utils/data-utils.js';
+import { findByID, updateUserStats } from '../utils/data-utils.js';
 
 // quest variables
 const h2 = document.querySelector('h2');
@@ -50,6 +50,8 @@ export function renderChoiceOutcome(choice) {
     h2.textContent = choiceObject.description;
     p.textContent = choiceObject.result;
     
+    updateUserStats(choiceObject, questObject);
+
     continueToMap();
 }
 
@@ -63,7 +65,6 @@ function continueToMap() {
     main.append(continueButton);
 
     continueButton.addEventListener('click', () => {
-        // update user stats either here or in renderChoiceOutcome
         window.location = '../map/';
     });
 }

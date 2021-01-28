@@ -28,9 +28,12 @@ export function submitUserData(formData) {
     setUser(user);
 }
 
-// this function does not work and is also pretty redundant considering we can change object properties by assignment... holding onto it to experiment with later
-// export function updateUser(param, change) {
-//     const userObject = getUser();
-//     userObject[param] = change(userObject[param]);
-//     setUser(userObject);
-// }
+export function updateUserStats(choiceObject, questObject) {
+    const userObject = getUser();
+
+    userObject.completed[questObject.id] = true;
+    userObject.hp += choiceObject.hp;
+    userObject.gold += choiceObject.gold;
+
+    setUser(userObject);
+}
