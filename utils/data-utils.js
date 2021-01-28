@@ -1,4 +1,5 @@
 const USER = 'USER';
+const emptyUser = {};
 
 export function setUser(userObject) {
     localStorage.setItem(USER, JSON.stringify(userObject));
@@ -12,4 +13,8 @@ export function updateUser(param, change) {
     const userObject = getUser();
     userObject[param] = change(userObject[param]);
     setUser(userObject);
+}
+
+export function clearUser() {
+    localStorage.setItem(USER, JSON.stringify(emptyUser));
 }
