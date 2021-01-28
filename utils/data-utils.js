@@ -1,6 +1,10 @@
 const USER = 'USER';
 const emptyUser = {};
 
+export function findByID(id, array) {
+    return array.find(item => item.id === id);
+}
+
 export function setUser(userObject) {
     localStorage.setItem(USER, JSON.stringify(userObject));
 }
