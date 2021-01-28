@@ -26,7 +26,7 @@ const machine = {
         id: 'pray',
         description: 'Fall prostrate before the ancient idol',
         result: `
-		Recognizing the machine for as a potent religious symbol from the Before Times, you fall to your knees and bow forward in reverence. The silicon gods smile upon you, and you feel refreshed. You gain 20 hp.
+		Recognizing the machine as a potent religious symbol from the Before Times, you fall to your knees and bow forward in reverence. The silicon gods smile upon you, and you feel refreshed. You gain 20 hp.
 		`,
         hp: 20,
         gold: 0

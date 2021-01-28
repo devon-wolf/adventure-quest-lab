@@ -37,6 +37,7 @@ export function renderQuest() {
     choiceSelection.append(button);
 }
 
+// choice-based sub-page rendering
 export function selectChoice(form) {
     const choiceData = new FormData(form);
     return choiceData.get('choices');
@@ -46,4 +47,8 @@ export function renderChoiceOutcome(choice) {
     const questChoices = questObject.choices;
     const choiceObject = findByID(choice, questChoices);
     console.log(choiceObject);
+
+    h2.textContent = choiceObject.description;
+    p.textContent = choiceObject.result;
+    choiceSelection.textContent = '';
 }
