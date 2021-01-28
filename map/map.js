@@ -1,4 +1,4 @@
-import { checkQuestStatus, renderMapEntry } from '../utils/render-utils.js';
+import { checkQuestStatus, renderMapEntry } from '../utils/map-render-utils.js';
 
 checkQuestStatus();
 renderMapEntry();

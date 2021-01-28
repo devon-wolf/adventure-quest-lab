@@ -2,7 +2,6 @@ import {
     setUser,
     getUser,
     clearUser,
-    submitUserData
 } from '../utils/data-utils.js';
 
 const test = QUnit.test;

@@ -1,5 +1,5 @@
 import {
-    setUser, submitUserData
+    submitUserData
 } from './utils/data-utils.js';
 
 const userDataForm = document.querySelector('form');
