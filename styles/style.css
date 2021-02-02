@@ -8,3 +8,36 @@ body, html {
 	margin: 0;
 	padding: 0;
 }
+
+body {
+	background-color: lightslategray;
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	font-family: 'Playfair Display', serif;
+}
+
+main, aside {
+	padding: 1rem;
+	height: auto;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+aside {
+	background-color: rgb(107, 52, 134);
+	color: lightsteelblue;
+	text-shadow: rgb(6, 36, 36) 1px 1px;
+	box-shadow: rgb(6, 36, 36) .3rem .3rem;
+}
+
+button, input {
+	font-family: 'Playfair Display', serif;
+}
+
+input[type="radio"]:checked {
+	transform: scale(1.5);
+}
